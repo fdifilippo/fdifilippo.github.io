@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Di Filippo Francesco</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         body {
-            font-family: Arial, sans-serif;
-            font-size: 20px;
+            font-family: Helvetica Neue, sans-serif;
             margin: 0;
             padding: 0;
             text-align: center;
-            background: #e0f2f1;
-            color: #000;
+            line-height: 1.6;
+            background-color: #f0f8ff;
+            color: #222;
+
         }
         /* Creates a fixed navigation bar at the top with links to different sections */
+
         .navbar {
-            background: #01579b;
-            padding: 10px 0;
-            position: fixed;
+            background: #013a63;
+            padding: 5px 0;
+            position: sticky;
             width: 100%;
             top: 0;
             left: 0;
@@ -34,22 +38,49 @@
             display: inline-block;
         }
         .navbar a:hover {
-            background: #0277bd;
+            background: #013a63;
         }
         .header {
-background: url('images/wallpaper_4.jpg') no-repeat 40% 42%;
-background-size: 170%;
-    height: 500px;
+            background: linear-gradient(rgba(15, 23, 42, .2), rgba(15, 23, 42, .8)),
+        url('images/wallpaper_4.jpg') no-repeat 40% 42%;
+        background-size: 120%;
+        color: white;
+    text-align: center;
+
+    height: 300px;
     position: relative; /* Needed for absolute positioning inside */
-    margin-top: px;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.social-icons img {
+    height: 60px;
+    width: auto;        /* control icon size */
+    cursor: pointer;
+    font-size: 1.6em;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.25);
+    opacity: 0.8;
+}
+
+
+        h2 {
+            color: #01579b;
+            border-bottom: 2px solid #81d4fa;
+            padding-bottom: 5px;
+        }
 .header-name {
-    position: absolute;
-    top: 12%;               
-    left: 38%;
+    position: relative;
     transform: translate(0%, 0%);
-    color: #01579b;
+    color: white;
     font-size: 2em;
 }
 
@@ -65,13 +96,13 @@ background-size: 170%;
         .cv a {
             display: inline-block;
             padding: 10px 20px;
-            background: #01579b;
+            background: #0D0D0D;
             color: white;
             text-decoration: none;
             border-radius: 5px;
         }
         .cv a:hover {
-            background: #0277bd;
+            background: #0D0D0D;
         }
         .highlight {
             padding: 20px;
@@ -79,10 +110,10 @@ background-size: 170%;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: #b3e5fc;
+            background: #EBF1F9;
         }
         .highlight:nth-child(odd) {
-            background: #81d4fa;
+            background: #f8fafc;
         }
         .highlight img {
             width: 200px;
@@ -143,28 +174,41 @@ background-size: 170%;
         width: 100% !important;
         float: none !important;
     }
-}
+
 
     </style>
 </head>
 <body>
+    <div class="header">
+        <div class="header-name">Francesco Di Filippo</div>
+    </div>
+
     <div class="navbar">
         <a href="#about">About</a>
         <a href="#cv">CV</a>
         <a href="#highlights">Highlights</a>
         <a href="#talks">Videos of talks/lectures</a>
     </div>
-    <div class="header">
-        <div class="header-name">Francesco Di Filippo</div>
-    </div>
+
     <div class="container">
         <div id="about" class="section about">
             <h2>About Me</h2>
             <p>Hello, my name is Francesco and I am from Salerno, a beautiful city in the south of Italy.<br>
  I obtained my Ph.D. in astroparticle physics under the supervision of Stefano Liberati in SISSA, Trieste, Italy. <br>
 After that, I moved to Kyoto, Prague, and I am now in Frankfurt. <br>
-I am interested in several aspects of black hole physics, including semiclassical effects and the singularity problem. You can fing the full list of my pubblications on my  <a href="https://inspirehep.net/authors/1718060?ui-citation-summary=true">Inspire page</a>. <br>
+I am interested in several aspects of black hole physics, including semiclassical effects and the singularity problem. You can find the full list of my pubblications on my  <a href="https://inspirehep.net/authors/1718060?ui-citation-summary=true">Inspire page</a>. <br>
 There are many things I like to do when I am not doing physics. Among them are cooking and playing chess. If you like to play chess too, we can do it together <a href="https://lichess.org/@/Fradifili">here</a>.</p></div>
+<div class="social-icons">
+
+<a href="mailto:difilippo@itp.uni-frankfurt.de" title="Email me"><img src="images/email.png"></a>
+<a href="https://inspirehep.net/authors/1718060" title="My Inspire webpage"><img src="images/Inspire.png"></a>
+
+
+    <a href="https://lichess.org/@/Fradifili"title="Lichess">
+        <img src="images/Lichess-Logo.png">
+    </a>
+</div>
+
         <div id="cv" class="section cv">
             <h2>Curriculum Vitae</h2>
             <p> <strong>Contact:</strong> difilippo AT itp.uni-frankfurt.de <p>
@@ -195,7 +239,7 @@ There are many things I like to do when I am not doing physics. Among them are c
             <div class="highlight reverse">
                     <div style="width:60%;float: left;">
                          <h3>Frankfurt</h3>
-                       <p>[February 2025] I just moved to Frankfurt for my new position as a Humboldt. Excited for yet another new beginning.</p>
+                       <p>[February 2025] I just moved to Frankfurt for my new position as a Humboldt fellow. Excited for yet another new beginning.</p>
                     </div>
                     <div style="width:3%;float: left;">
                         <p> <p>
