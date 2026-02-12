@@ -20,8 +20,7 @@
             color: #222;
 
         }
-        /* Creates a fixed navigation bar at the top with links to different sections */
-
+       
         .navbar {
             background: #013a63;
             padding: 5px 0;
@@ -55,20 +54,21 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 15px;
+    margin-top: 30px;
 }
 
 .social-icons img {
-    height: 60px;
+    height: 40px;
     width: auto;        /* control icon size */
     cursor: pointer;
     font-size: 1.6em;
+    opacity: 0.25;
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .social-icons img:hover {
-    transform: scale(1.25);
-    opacity: 0.8;
+    transform: scale(1.05);
+    opacity: 1;
 }
 
 
@@ -174,6 +174,42 @@
         width: 100% !important;
         float: none !important;
     }
+        .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+}
+/* About section split layout */
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;    
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    filter: drop-shadow(6px 6px 16px black);
+
+}
 
 
     </style>
@@ -191,22 +227,41 @@
     </div>
 
     <div class="container">
-        <div id="about" class="section about">
-            <h2>About Me</h2>
+<div id="about" class="section about">
+    <h2>About Me</h2>
+
+    <div class="about-flex">
+
+        <div class="about-text">
             <p>
-I obtained my Ph.D. in astroparticle physics at SISSA (Trieste, Italy) under the supervision of Stefano Liberati. After postdoctoral positions in Kyoto and Prague, I am currently a Humboldt Postdoctoral Fellow at the Institute of Theoretical Physics, Goethe University Frankfurt, Germany.
+            I obtained my Ph.D. in astroparticle physics at SISSA (Trieste, Italy) under the supervision of Stefano Liberati. After postdoctoral positions in Kyoto and Prague, I am currently a Humboldt Postdoctoral Fellow at the Institute of Theoretical Physics, Goethe University Frankfurt, Germany.
+            </p>
 
-My research focuses on black hole physics, with particular interest in semiclassical effects and the singularity problem. A complete list of my publications is available on my <a href="https://inspirehep.net/authors/1718060?ui-citation-summary=true">INSPIRE profile</a>.
-<div class="social-icons">
+            <p>
+            My research focuses on black hole physics, with particular interest in semiclassical effects and the singularity problem. A complete list of my publications is available on my 
+            <a href="https://inspirehep.net/authors/1718060?ui-citation-summary=true">INSPIRE profile</a>.
+            </p>
 
-<a href="mailto:difilippo@itp.uni-frankfurt.de" title="Email me"><img src="images/email.png"></a>
-<a href="https://inspirehep.net/authors/1718060" title="My Inspire webpage"><img src="images/inspire.png"></a>
+        </div>
 
+        <div class="about-image">
+            <img src="images/profile.jpg" alt="Profile picture">
+        </div>
+    </div>
 
-    <a href="https://lichess.org/@/Fradifili"title="Lichess">
-        <img src="images/Lichess-Logo.png">
-    </a>
+            <div class="social-icons">
+                <a href="mailto:difilippo@itp.uni-frankfurt.de" title="Email me">
+                    <img src="images/email.png">
+                </a>
+                <a href="https://inspirehep.net/authors/1718060" title="My Inspire webpage">
+                    <img src="images/inspire.png">
+                </a>
+                <a href="https://lichess.org/@/Fradifili" title="Lichess">
+                    <img src="images/Lichess-Logo.png">
+                </a>
+            </div>
 </div>
+
 
         <div id="cv" class="section cv">
             <h2>Curriculum Vitae</h2>
